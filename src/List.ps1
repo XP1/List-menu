@@ -1,5 +1,5 @@
 function sortNaturally {
-    [Regex]::replace($_, '\d+', {
+    [Regex]::replace($_, "\d+", {
         $args[0].value.padLeft(20)
     })
 }
@@ -35,15 +35,15 @@ function lengthInBufferCells {
     )
 
     $isWide = ($c -ge 0x1100 -and (
-        ($c -ge 0x1100 -and $c -le 0x115f) -or # Hangul Jamo init. consonants.
-        ($c -eq 0x2329 -or $c -eq 0x232a) -or
-        ($c -ge 0x2e80 -and $c -le 0xa4cf -and $c -ne 0x303f) -or # CJK ... Yi.
-        ($c -ge 0xac00 -and $c -le 0xd7a3) -or # Hangul syllables.
-        ($c -ge 0xf900 -and $c -le 0xfaff) -or # CJK compatibility ideographs.
-        ($c -ge 0xfe10 -and $c -le 0xfe19) -or # Vertical forms.
-        ($c -ge 0xfe30 -and $c -le 0xfe6f) -or # CJK compatibility forms.
-        ($c -ge 0xff00 -and $c -le 0xff60) -or # Full-width forms.
-        ($c -ge 0xffe0 -and $c -le 0xffe6)
+        ($c -ge 0x1100 -and $c -le 0x115F) -or # Hangul Jamo init. consonants.
+        ($c -eq 0x2329 -or $c -eq 0x232A) -or
+        ($c -ge 0x2E80 -and $c -le 0xA4CF -and $c -ne 0x303F) -or # CJK ... Yi.
+        ($c -ge 0xAC00 -and $c -le 0xD7A3) -or # Hangul syllables.
+        ($c -ge 0xF900 -and $c -le 0xFAFF) -or # CJK compatibility ideographs.
+        ($c -ge 0xFE10 -and $c -le 0xFE19) -or # Vertical forms.
+        ($c -ge 0xFE30 -and $c -le 0xFE6F) -or # CJK compatibility forms.
+        ($c -ge 0xFF00 -and $c -le 0xFF60) -or # Full-width forms.
+        ($c -ge 0xFFE0 -and $c -le 0xFFE6)
     ))
 
     (1 + [int] $isWide)
@@ -51,14 +51,14 @@ function lengthInBufferCells {
 
 function setMaxBufferSize {
     $rawUi = $host.ui.rawUi
-    $rawUi.bufferSize = new-object System.Management.Automation.Host.Size(200, 1277950)
+    $rawUi.bufferSize = new-object System.Management.Automation.Host.Size(200, 32766)
 }
 
 function getBufferText {
     $rawUi = $host.ui.rawUi
     $width = [Math]::max($rawUi.bufferSize.width, 0)
     $height = [Math]::max($rawUi.cursorPosition.y, 0)
-    $rectangle = new-object System.Management.Automation.Host.Rectangle 0, 0, $width, $height
+    $rectangle = new-object System.Management.Automation.Host.Rectangle(0, 0, $width, $height)
     $buffer = $rawUi.getBufferContents($rectangle)
 
     $lines = new-object System.Text.StringBuilder
@@ -79,7 +79,7 @@ function getBufferText {
         $characters.length = 0
     }
 
-    $lines.toString() -replace '[ \0]*\r?\n', "`r`n"
+    $lines.toString() -replace "[ \0]*\r?\n", "`r`n"
 }
 
 function isCodePageUtf8 {
