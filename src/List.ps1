@@ -87,7 +87,7 @@ function isCodePageUtf8 {
     $codePageName = "OEMCP"
     $codePageValue = "65001"
 
-    ((get-itemproperty -path $registryPath -name $codePageName).$codePageName -eq $codePageValue)
+    ((get-itemProperty -path $registryPath -name $codePageName).$codePageName -eq $codePageValue)
 }
 
 function main {
