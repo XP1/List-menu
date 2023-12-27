@@ -51,12 +51,12 @@ function lengthInBufferCells {
 
 function setMaxBufferSize {
     $rawUi = $host.ui.rawUi
-    $rawUi.bufferSize = new-object System.Management.Automation.Host.Size($rawUi.windowSize.width, 1277950)
+    $rawUi.bufferSize = new-object System.Management.Automation.Host.Size(200, 1277950)
 }
 
 function getBufferText {
     $rawUi = $host.ui.rawUi
-    $width = [Math]::max($rawUi.bufferSize.width - 1, 0)
+    $width = [Math]::max($rawUi.bufferSize.width, 0)
     $height = [Math]::max($rawUi.cursorPosition.y, 0)
     $rectangle = new-object System.Management.Automation.Host.Rectangle 0, 0, $width, $height
     $buffer = $rawUi.getBufferContents($rectangle)
