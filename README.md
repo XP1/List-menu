@@ -3,6 +3,9 @@ Right-click list menu for files and tree list output on Windows.
 
 ![ListTree1](https://github.com/XP1/List-menu/assets/776585/ef57db4c-c5a8-4cd1-8a1e-bfc38192e3a7)
 
+## Installation
+Run `Install list menu.bat` as administrator.
+
 ## Test cases
 ### Tree
     mkdir "Erika szobája"
@@ -19,8 +22,6 @@ Right-click list menu for files and tree list output on Windows.
     $null | Set-Content "Erika szobája/Kátai Tamás - 09 Zúzmara.ogg"
 
 ### Output:
-`Tree.txt`:
-
     Folder PATH listing
     Volume serial number is 00000000 0000:0000
     C:.
