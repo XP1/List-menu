@@ -1,0 +1,97 @@
+Windows Registry Editor Version 5.00
+
+; Directory.
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\Shell\List]
+"MUIVerb"="List"
+"ExtendedSubCommandsKey"="Directory\\ContextMenus\\List"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\ContextMenus\List\Shell\Files]
+"MUIVerb"="Files"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\ContextMenus\List\Shell\Files\Command]
+; powershell -executionPolicy bypass "%SystemRoot%\List.ps1" -type 'files' -directory '%1'
+@=hex(2):70,00,6f,00,77,00,65,00,72,00,73,00,68,00,65,00,6c,00,6c,00,20,00,2d,\
+  00,65,00,78,00,65,00,63,00,75,00,74,00,69,00,6f,00,6e,00,50,00,6f,00,6c,00,\
+  69,00,63,00,79,00,20,00,62,00,79,00,70,00,61,00,73,00,73,00,20,00,22,00,25,\
+  00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,\
+  4c,00,69,00,73,00,74,00,2e,00,70,00,73,00,31,00,22,00,20,00,2d,00,74,00,79,\
+  00,70,00,65,00,20,00,27,00,66,00,69,00,6c,00,65,00,73,00,27,00,20,00,2d,00,\
+  64,00,69,00,72,00,65,00,63,00,74,00,6f,00,72,00,79,00,20,00,27,00,25,00,31,\
+  00,27,00,00,00
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\ContextMenus\List\Shell\FilesRecursively]
+"MUIVerb"="Files recursively"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\ContextMenus\List\Shell\FilesRecursively\Command]
+; powershell -executionPolicy bypass "%SystemRoot%\List.ps1" -type 'filesRecursively' -directory '%1'
+@=hex(2):70,00,6f,00,77,00,65,00,72,00,73,00,68,00,65,00,6c,00,6c,00,20,00,2d,\
+  00,65,00,78,00,65,00,63,00,75,00,74,00,69,00,6f,00,6e,00,50,00,6f,00,6c,00,\
+  69,00,63,00,79,00,20,00,62,00,79,00,70,00,61,00,73,00,73,00,20,00,22,00,25,\
+  00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,\
+  4c,00,69,00,73,00,74,00,2e,00,70,00,73,00,31,00,22,00,20,00,2d,00,74,00,79,\
+  00,70,00,65,00,20,00,27,00,66,00,69,00,6c,00,65,00,73,00,52,00,65,00,63,00,\
+  75,00,72,00,73,00,69,00,76,00,65,00,6c,00,79,00,27,00,20,00,2d,00,64,00,69,\
+  00,72,00,65,00,63,00,74,00,6f,00,72,00,79,00,20,00,27,00,25,00,31,00,27,00,\
+  00,00
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\ContextMenus\List\Shell\Tree]
+"MUIVerb"="Tree"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\ContextMenus\List\Shell\Tree\Command]
+; powershell -executionPolicy bypass "%SystemRoot%\List.ps1" -type 'tree' -directory '%1'
+@=hex(2):70,00,6f,00,77,00,65,00,72,00,73,00,68,00,65,00,6c,00,6c,00,20,00,2d,\
+  00,65,00,78,00,65,00,63,00,75,00,74,00,69,00,6f,00,6e,00,50,00,6f,00,6c,00,\
+  69,00,63,00,79,00,20,00,62,00,79,00,70,00,61,00,73,00,73,00,20,00,22,00,25,\
+  00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,\
+  4c,00,69,00,73,00,74,00,2e,00,70,00,73,00,31,00,22,00,20,00,2d,00,74,00,79,\
+  00,70,00,65,00,20,00,27,00,74,00,72,00,65,00,65,00,27,00,20,00,2d,00,64,00,\
+  69,00,72,00,65,00,63,00,74,00,6f,00,72,00,79,00,20,00,27,00,25,00,31,00,27,\
+  00,00,00
+
+; Directory background.
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\Background\Shell\List]
+"MUIVerb"="List"
+"ExtendedSubCommandsKey"="Directory\\Background\\ContextMenus\\List"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\Background\ContextMenus\List\Shell\Files]
+"MUIVerb"="Files"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\Background\ContextMenus\List\Shell\Files\Command]
+; powershell -executionPolicy bypass "%SystemRoot%\List.ps1" -type 'files' -directory '%V'
+@=hex(2):70,00,6f,00,77,00,65,00,72,00,73,00,68,00,65,00,6c,00,6c,00,20,00,2d,\
+  00,65,00,78,00,65,00,63,00,75,00,74,00,69,00,6f,00,6e,00,50,00,6f,00,6c,00,\
+  69,00,63,00,79,00,20,00,62,00,79,00,70,00,61,00,73,00,73,00,20,00,22,00,25,\
+  00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,\
+  4c,00,69,00,73,00,74,00,2e,00,70,00,73,00,31,00,22,00,20,00,2d,00,74,00,79,\
+  00,70,00,65,00,20,00,27,00,66,00,69,00,6c,00,65,00,73,00,27,00,20,00,2d,00,\
+  64,00,69,00,72,00,65,00,63,00,74,00,6f,00,72,00,79,00,20,00,27,00,25,00,56,\
+  00,27,00,00,00
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\Background\ContextMenus\List\Shell\FilesRecursively]
+"MUIVerb"="Files recursively"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\Background\ContextMenus\List\Shell\FilesRecursively\Command]
+; powershell -executionPolicy bypass "%SystemRoot%\List.ps1" -type 'filesRecursively' -directory '%V'
+@=hex(2):70,00,6f,00,77,00,65,00,72,00,73,00,68,00,65,00,6c,00,6c,00,20,00,2d,\
+  00,65,00,78,00,65,00,63,00,75,00,74,00,69,00,6f,00,6e,00,50,00,6f,00,6c,00,\
+  69,00,63,00,79,00,20,00,62,00,79,00,70,00,61,00,73,00,73,00,20,00,22,00,25,\
+  00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,\
+  4c,00,69,00,73,00,74,00,2e,00,70,00,73,00,31,00,22,00,20,00,2d,00,74,00,79,\
+  00,70,00,65,00,20,00,27,00,66,00,69,00,6c,00,65,00,73,00,52,00,65,00,63,00,\
+  75,00,72,00,73,00,69,00,76,00,65,00,6c,00,79,00,27,00,20,00,2d,00,64,00,69,\
+  00,72,00,65,00,63,00,74,00,6f,00,72,00,79,00,20,00,27,00,25,00,56,00,27,00,\
+  00,00
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\Background\ContextMenus\List\Shell\Tree]
+"MUIVerb"="Tree"
+
+[HKEY_LOCAL_MACHINE\Software\Classes\Directory\Background\ContextMenus\List\Shell\Tree\Command]
+; powershell -executionPolicy bypass "%SystemRoot%\List.ps1" -type 'tree' -directory '%V'
+@=hex(2):70,00,6f,00,77,00,65,00,72,00,73,00,68,00,65,00,6c,00,6c,00,20,00,2d,\
+  00,65,00,78,00,65,00,63,00,75,00,74,00,69,00,6f,00,6e,00,50,00,6f,00,6c,00,\
+  69,00,63,00,79,00,20,00,62,00,79,00,70,00,61,00,73,00,73,00,20,00,22,00,25,\
+  00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,00,5c,00,\
+  4c,00,69,00,73,00,74,00,2e,00,70,00,73,00,31,00,22,00,20,00,2d,00,74,00,79,\
+  00,70,00,65,00,20,00,27,00,74,00,72,00,65,00,65,00,27,00,20,00,2d,00,64,00,\
+  69,00,72,00,65,00,63,00,74,00,6f,00,72,00,79,00,20,00,27,00,25,00,56,00,27,\
+  00,00,00
