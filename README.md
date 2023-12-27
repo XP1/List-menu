@@ -32,12 +32,12 @@ Run `Install list menu.bat` as administrator.
             cover.jpg
             Erika szobája.m3u
             Kátai Tamás - 01 Télvíz.ogg
-            Kátai Tamás - 02 Zölderdo.ogg
+            Kátai Tamás - 02 Zölderdõ.ogg
             Kátai Tamás - 03 Renoir kertje.ogg
-            Kátai Tamás - 04 Esoben szaladtál.ogg
-            Kátai Tamás - 05 Azik az út.ogg
+            Kátai Tamás - 04 Esõben szaladtál.ogg
+            Kátai Tamás - 05 Ázik az út.ogg
             Kátai Tamás - 06 Sûrû völgyek takaród.ogg
-            Kátai Tamás - 07 Oszhozó.ogg
+            Kátai Tamás - 07 Õszhozó.ogg
             Kátai Tamás - 08 Mécsvilág.ogg
             Kátai Tamás - 09 Zúzmara.ogg
 
